@@ -37,7 +37,12 @@ const SettingsNav = () => {
           Ο λογαριασμός μου
         </Menu.Item>
       </Menu>
-      <Image src={logo} />
+      <Grid.Row />
+      <Menu vertical>
+        <Menu.Item>
+          <Image src={logo} />
+        </Menu.Item>
+      </Menu>
     </Grid.Column>
   )
 }

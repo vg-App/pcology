@@ -14,7 +14,8 @@ const UserDetailedDescription = ({ profile }) => {
             <p>
               Καταγωγή από <strong>{profile.origin || ''}</strong>
             </p>
-            <p>{profile.description}</p>
+            <p>{profile.email}</p>
+            <p>{profile.about}</p>
           </Grid.Column>
           <Grid.Column width={6}>
             <Header icon="heart outline" content="Ενδιαφέροντα" />

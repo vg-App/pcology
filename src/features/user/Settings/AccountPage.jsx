@@ -16,6 +16,7 @@ import {
   composeValidators
 } from 'revalidate'
 import TextInput from '../../../app/common/form/TextInput'
+import { Link } from '@material-ui/core'
 
 const validate = combineValidators({
   newPassword1: isRequired({ message: 'Παρακαλώ προσθέστε ένα νέο κωδικό' }),
@@ -87,7 +88,7 @@ const AccountPage = ({
             λογαριασμό σας
           </p>
           <Button type="button" color="facebook">
-            <Icon name="facebook" />
+            <Icon name="facebook" as={Link} />
             Μετάβαση στο Facebook
           </Button>
         </div>

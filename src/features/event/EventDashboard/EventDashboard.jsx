@@ -39,7 +39,6 @@ class EventDashboard extends Component {
   render() {
     const { activities } = this.props
     const { events } = this.props
-
     return (
       <Grid>
         <Grid.Column width={10}>
@@ -55,7 +54,6 @@ class EventDashboard extends Component {
     )
   }
 }
-
 export default connect(
   mapState,
   actions
