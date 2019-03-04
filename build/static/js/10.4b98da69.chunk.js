@@ -1,0 +1,2 @@
+webpackJsonp([10],{1491:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var r=t(0),u=t.n(r);n.default=function(){return u.a.createElement("div",null,u.a.createElement("h1",null,"Error 404 not found!"))}}});
+//# sourceMappingURL=10.4b98da69.chunk.js.map
