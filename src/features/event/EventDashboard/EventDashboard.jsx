@@ -4,11 +4,10 @@ import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { getEventsForDashboard } from '../eventActions'
 import EventList from '../EventList/EventList'
-import EventActivity from '../EventActivity/EventActivity'
+//import EventActivity from '../EventActivity/EventActivity'
 
 const mapState = state => ({
   events: state.firestore.ordered.events,
-
   activities: state.firestore.ordered.activity
 })
 
@@ -37,19 +36,20 @@ class EventDashboard extends Component {
   handleContextRef = contextRef => this.setState({ contextRef })
 
   render() {
-    const { activities } = this.props
+    //const { activities } = this.props
     const { events } = this.props
     return (
       <Grid>
-        <Grid.Column width={10}>
+        <Grid.Column width={16}>
           <EventList events={events} />
         </Grid.Column>
+        {/* 
         <Grid.Column width={6}>
           <EventActivity
             activities={activities}
             contextRef={this.state.contextRef}
           />
-        </Grid.Column>
+        </Grid.Column>*/}
       </Grid>
     )
   }

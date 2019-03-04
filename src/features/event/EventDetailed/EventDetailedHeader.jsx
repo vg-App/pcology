@@ -1,5 +1,5 @@
 import React from 'react'
-import { Segment, Image, Item, Header, Button } from 'semantic-ui-react'
+import { Segment, Image, Item, Header, Button, Label } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 
 const eventImageStyle = {
@@ -56,7 +56,7 @@ const EventDetailedHeader = ({
       <Segment attached="bottom">
         {!isHost && (
           <div>
-            {isGoing && (
+            {isGoing && !event.cancelled && (
               <Button onClick={() => cancelGoingToEvent(event)}>
                 Δεν μου αρέσει
               </Button>
@@ -72,7 +72,7 @@ const EventDetailedHeader = ({
               </Button>
             )}
 
-            {!authenticated && (
+            {!authenticated && !event.cancelled && (
               <Button
                 loading={loading}
                 onClick={() => openModal('UnauthModal')}
@@ -80,6 +80,14 @@ const EventDetailedHeader = ({
               >
                 Μου αρέσει
               </Button>
+            )}
+
+            {event.cancelled && !isHost && (
+              <Label
+                size="large"
+                color="red"
+                content="Το άρθρο έχει αποσυρθεί"
+              />
             )}
           </div>
         )}

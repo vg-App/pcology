@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import logo from '../../../myphoto/pic1.gif'
 
 const EventDetailedSidebar = ({ attendees }) => {
-  const isHost = false
   return (
     <div>
       <Segment>
@@ -25,7 +24,7 @@ const EventDetailedSidebar = ({ attendees }) => {
           {attendees &&
             attendees.map(attendee => (
               <Item key={attendee.id} style={{ position: 'relative' }}>
-                {isHost && (
+                {attendee.host && (
                   <Label
                     style={{ position: 'absolute' }}
                     color="orange"

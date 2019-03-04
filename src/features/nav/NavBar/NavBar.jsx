@@ -36,7 +36,7 @@ class NavBar extends Component {
     return (
       <Menu inverted fixed="top">
         <Container>
-          <Menu.Item as={Link} to="/" header>
+          <Menu.Item as={Link} to="/home" header>
             <img src="/assets/logo.png" alt="logo" />
             PCology
           </Menu.Item>

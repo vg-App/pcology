@@ -14,7 +14,7 @@ const HomePage = ({ history }) => {
             />
             <div className="content">PCology</div>
           </h1>
-          <h2>Η "επιστημονική" πλευρά των υπολογιστών</h2>
+          <h2 className="ccontent">Η "επιστημονική" πλευρά των υπολογιστών</h2>
           <div
             onClick={() => history.push('/events')}
             className="ui huge white inverted button"

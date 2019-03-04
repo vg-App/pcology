@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import EventListItem from './EventListItem'
+import EventListItem from './HomepageListItem'
 
-class EventList extends Component {
+class HomepageList extends Component {
   render() {
     const { events, deleteEvent } = this.props
     return (
@@ -20,4 +20,4 @@ class EventList extends Component {
     )
   }
 }
-export default EventList
+export default HomepageList

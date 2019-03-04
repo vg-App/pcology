@@ -141,15 +141,17 @@ class EventForm extends Component {
               >
                 Ακύρωση
               </Button>
-              <Button
-                onClick={() => cancelToggle(!event.cancelled, event.id)}
-                type="button"
-                color={event.cancelled ? 'green' : 'red'}
-                floated="right"
-                content={
-                  event.cancelled ? 'Επανεργοποίηση άρθρου' : 'Ακύρωση άρθρου'
-                }
-              />
+              {event.id && (
+                <Button
+                  onClick={() => cancelToggle(!event.cancelled, event.id)}
+                  type="button"
+                  color={event.cancelled ? 'green' : 'red'}
+                  floated="right"
+                  content={
+                    event.cancelled ? 'Επανεργοποίηση άρθρου' : 'Ακύρωση άρθρου'
+                  }
+                />
+              )}
             </Form>
           </Segment>
         </Grid.Column>

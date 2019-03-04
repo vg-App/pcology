@@ -9,6 +9,7 @@ const SocialLogin = ({ socialLogin }) => {
         type="button"
         style={{ marginBottom: '10px' }}
         fluid
+        disabled
         color="facebook"
       >
         <Icon name="facebook" /> Σύνδεση μέσω Facebook

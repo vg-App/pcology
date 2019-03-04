@@ -11,6 +11,7 @@ import UserDetailedEvents from './UserDetailedEvents'
 import { userDetailedQuery } from '../userQueries'
 import LoadingComponent from '../../../app/layout/LoadingComponent'
 import { getUserEvents, followUser, unfollowUser } from '../userActions'
+import toastr from 'react-redux-toastr'
 
 const mapState = (state, ownProps) => {
   let userUid = null
@@ -44,6 +45,13 @@ const actions = {
 
 class UserDetailedPage extends Component {
   async componentDidMount() {
+    let user = await this.props.firestore.get(
+      `users/${this.props.match.params.id}`
+    )
+    if (!user.exists) {
+      toastr.error('Δεν βρέθηκε', 'Ο χρήστης που ψάχνετε δεν υπάρχει')
+      this.props.history.push('/error')
+    }
     let events = await this.props.getUserEvents(this.props.userUid)
     console.log(events)
   }
@@ -66,7 +74,7 @@ class UserDetailedPage extends Component {
       unfollowUser
     } = this.props
     const isCurrentUser = auth.uid === match.params.id
-    const loading = Object.values(requesting).some(a => a === true)
+    const loading = requesting[`users/${match.params.id}`]
     const isFollowing = !isEmpty(following)
 
     if (loading) return <LoadingComponent inverted={true} />
