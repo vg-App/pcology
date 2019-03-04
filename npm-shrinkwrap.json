@@ -1,6 +1,6 @@
 {
-  "name": "PCology",
-  "version": "0.1.0",
+  "name": "pcology",
+  "version": "0.1.1",
   "lockfileVersion": 1,
   "requires": true,
   "dependencies": {
@@ -4549,6 +4549,12 @@
         "emoji-regex": "^6.1.0",
         "jsx-ast-utils": "^1.4.0"
       }
+    },
+    "eslint-plugin-promise": {
+      "version": "4.0.1",
+      "resolved": "https://registry.npmjs.org/eslint-plugin-promise/-/eslint-plugin-promise-4.0.1.tgz",
+      "integrity": "sha512-Si16O0+Hqz1gDHsys6RtFRrW7cCTB6P7p3OJmKp3Y3dxpQE2qwOA7d3xnV+0mBmrPoi0RBnxlCKvqu70te6wjg==",
+      "dev": true
     },
     "eslint-plugin-react": {
       "version": "7.4.0",
